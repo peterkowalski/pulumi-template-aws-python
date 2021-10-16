@@ -1,4 +1,4 @@
-"""An AWS Python Pulumi program"""
+"""An AWS Python Pulumi program."""
 
 # import pulumi_aws as aws
 from common import register_auto_tags

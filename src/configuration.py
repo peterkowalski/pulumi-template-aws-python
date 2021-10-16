@@ -1,4 +1,4 @@
-"""An AWS Python Pulumi configuration module"""
+"""An AWS Python Pulumi configuration module."""
 
 from typing import TypedDict
 

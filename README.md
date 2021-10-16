@@ -21,8 +21,10 @@ ${DESCRIPTION}
 
 6. Install Python virtual environment: `poetry install`
 
-7. Install `pre-commit` hooks: `pre-commit install`
+7. Initialize git repository: `git init`
 
-8. Login to your AWS backend: `pulumi login $BUCKET`
+8. Install `pre-commit` hooks: `pre-commit install`
 
-9. Create Pulumi stack: `pulumi stack init --secrets-provider="$KMS_KEY_ALIAS"`
+9. Login to your AWS backend: `pulumi login $BUCKET`
+
+10. Create Pulumi stack: `pulumi stack init --secrets-provider="$KMS_KEY_ALIAS"`

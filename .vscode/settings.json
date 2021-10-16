@@ -1,0 +1,6 @@
+{
+    "python.pythonPath": ".venv/bin/python",
+    "python.linting.pylamaEnabled": true,
+    "python.linting.enabled": true,
+    "python.linting.pylamaArgs": ["max_line_length=120"]
+}

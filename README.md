@@ -4,27 +4,12 @@ ${DESCRIPTION}
 
 ## Initial configuration
 
-1. Install [Pulumi](https://www.pulumi.com/docs/get-started/install/)
+1. Configure [AWS credentials](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-envvars.html)
 
-2. Configure [AWS credentials](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-files.html)
+2. Install Python packages: `poetry install`
 
-3. Install [Poetry](https://python-poetry.org)
+3. Initialize git repository: `git init`
 
-4. Install [pre-commit](https://pre-commit.com/#install)
+4. Execute `add-author.py` to populate NAME and EMAIL tokens with values from Git configuration.
 
-5. Add `.envrc` file with the following content:
-
-    ```bash
-    #! /usr/bin/env bash
-    export AWS_PROFILE=$YOUR_AWS_PROFILE
-    ```
-
-6. Install Python virtual environment: `poetry install`
-
-7. Initialize git repository: `git init`
-
-8. Install `pre-commit` hooks: `pre-commit install`
-
-9. Login to your AWS backend: `pulumi login $BUCKET`
-
-10. Create Pulumi stack: `pulumi stack init --secrets-provider="$KMS_KEY_ALIAS"`
+5. Install `pre-commit` hooks: `pre-commit install`

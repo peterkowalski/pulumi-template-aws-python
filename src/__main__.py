@@ -18,3 +18,4 @@ register_auto_tags(
 )
 
 resource_name_prefix = f'{config["metadata"]["project"]}-{config["metadata"]["stack"]}'
+

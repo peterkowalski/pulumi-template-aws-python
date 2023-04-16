@@ -1,9 +1,9 @@
 """An AWS Python Pulumi configuration module."""
 
 from typing import TypedDict
+import pulumi
 
 import common
-import pulumi
 
 
 class Configuration(TypedDict):
@@ -17,18 +17,19 @@ def load() -> Configuration:
     """Load configuration from YAML file.
 
     Returns:
-        A configuration dictionary."""
+        A configuration dictionary.
+    """
     tags_config = pulumi.Config("tags")
     aws_config = pulumi.Config("aws")
 
     return Configuration(
         metadata={
             "project": pulumi.get_project(),
-            "stack": pulumi.get_stack().split(".")[1],
+            "stack": pulumi.get_stack(),
             "region": aws_config.require("region"),
         },
         tagging={
-            "client": tags_config.require("client"),
-            "environment": tags_config.require("environment"),
+            "owner": tags_config.require("owner"),
+            "environment": common.Environment[tags_config.require("environment")],
         },
     )

@@ -10,6 +10,6 @@ ${DESCRIPTION}
 
 3. Initialize git repository: `git init`
 
-4. Execute `add-author.py` to populate NAME and EMAIL tokens with values from Git configuration.
+4. Execute `add-author.py` to populate NAME and EMAIL tokens with values from Git configuration
 
 5. Install `pre-commit` hooks: `pre-commit install`

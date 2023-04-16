@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 """Replace NAME and EMAIL with values from git configuration."""
 
-import subprocess
 import os
+import subprocess
 
 
 def get_git_config():
@@ -29,12 +29,12 @@ def replace_tokens(name, email):
         if file == os.path.basename(__file__):  # Skip this file
             continue
         if os.path.isfile(file):
-            with open(file, 'r', encoding='utf-8') as f:
-                content = f.read()
+            with open(file, 'r', encoding='utf-8') as file_handler:
+                content = file_handler.read()
                 content = content.replace('${NAME}',
                                           name).replace('${EMAIL}', email)
-            with open(file, 'w', encoding='utf-8') as f:
-                f.write(content)
+            with open(file, 'w', encoding='utf-8') as file_handler:
+                file_handler.write(content)
 
 
 def main():

@@ -16,4 +16,3 @@ template:
     tags:environment:
       description: Level of the environment (DEV/UAT/PROD)
       default: DEV
-

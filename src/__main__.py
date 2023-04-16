@@ -1,10 +1,10 @@
 """An AWS Python Pulumi program."""
 
-import pulumi_aws as aws
 import pulumi
+import pulumi_aws as aws
 
-from common import register_auto_tags
 import configuration
+from common import register_auto_tags
 
 config = configuration.load()
 register_auto_tags({

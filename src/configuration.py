@@ -1,6 +1,7 @@
 """An AWS Python Pulumi configuration module."""
 
 from typing import TypedDict
+
 import pulumi
 
 import common

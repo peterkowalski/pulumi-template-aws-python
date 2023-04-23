@@ -11,7 +11,7 @@ register_auto_tags({
     "Project": config["metadata"]["project"],
     "Stack": config["metadata"]["stack"],
     "Owner": config["tagging"]["owner"],
-    "Environment": config["tagging"]["environment"],
+    "Environment": str(config["tagging"]["environment"]),
 })
 
 resource_name_prefix = f'{config["metadata"]["project"]}-{config["metadata"]["stack"]}'

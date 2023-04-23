@@ -10,6 +10,7 @@ readme = "README.md"
 python = "^3.11"
 pulumi = "^3.0.0"
 pulumi-aws = "^5.0.0"
+protobuf = "3.20.3"
 
 [tool.isort]
 multi_line_output = 3

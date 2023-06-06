@@ -1,4 +1,4 @@
-# ${PROJECT}
+# ${PROJECT} BUGFIX
 
 ${DESCRIPTION}
 
